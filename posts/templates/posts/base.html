@@ -1,0 +1,30 @@
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Broski's Lair</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <a class="navbar-brand" href="/">Broski's Lair</a>
+    </nav>
+    <div class="container">
+        <div class="col-sm-9">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="col-sm-3">
+            <p><img style="width: 100%" src="https://i.ibb.co/3ypPMnv/74d22bd1-1ba2-4948-8028-d8ef8344338a.png" /></p>
+        </div>
+        <div class="col=sm-12">
+            <footer>
+                Broski &copy; {% now 'Y' %}
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
